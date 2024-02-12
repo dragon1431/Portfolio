@@ -1,0 +1,170 @@
+// common.scss
+@import "./mixin.scss";
+@import "./reset.css";
+
+html, body {
+    width: 100%;
+    background-color: #111111;
+}
+
+.header {
+    position: fixed;
+    top: 0; left: 0;
+
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .header-wrap{
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 1px solid white;
+        transition: 0.5s;
+
+        .header-left{
+            font-family: "Josefin Sans", sans-serif;
+            width: 50%;
+
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        .header-right{
+            display: flex;
+            justify-content: space-between;            
+            width: 50%;
+
+            font-weight: medium;
+            transition: 0.5s;
+        }
+
+        @include desktop {
+            .header-left{
+                font-size: 2.5vw;
+                padding-top: 0.75%;
+            }
+            .header-right{
+                font-size: 1.25vw;
+            }
+        }
+        @include tablet {
+            .header-left{
+                font-size: 4vw;
+                padding-top: 1.25%;
+            }
+            .header-right{
+                font-size: 2vw;
+            }
+        }
+        @include mobile {
+            .header-left{
+                font-size: 5.5vw;
+                padding-top: 2.5%;
+            }
+            .header-right{
+                font-size: 2.75vw;
+            }
+        }
+    }
+
+}
+
+.main-wrap{
+    height: 100vh;
+
+    .main-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        transition: 0.5s;
+        transform: translateY(5%);
+
+        p{
+            font-family: "Josefin Sans", sans-serif;
+            text-align: center;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        @include desktop {
+            p{
+                font-size: 8.333vw;
+            }
+        }
+
+        @include tablet {
+            p{
+                font-size: 10.666vw;
+            }
+        }
+
+        @include mobile {
+            p{
+                font-size: 12.999vw;
+            }
+        }
+
+    }
+
+    .icon-scrolldown {
+        opacity: 0;
+
+        animation: AniScrolldown 3s forwards linear 1s;
+    }
+
+    @include desktop {
+        .icon-scrolldown {
+            width: 5vw;
+        }
+    }
+
+    @include tablet {
+        .icon-scrolldown {
+            width: 7vw;
+        }
+    }
+
+    @include mobile {
+        .icon-scrolldown {
+            width: 9vw;
+        }
+    }
+
+}
+
+@keyframes AniScrolldown {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.5;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0.5;
+    }
+    80%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+// scrollDown하면 icon-scrolldown 사라짐, header 사라짐
