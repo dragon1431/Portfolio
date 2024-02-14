@@ -16,7 +16,7 @@ function Header() {
                 <div className="header-right">
                     <Link to="/">INFO</Link>
                     <Link to="/">PORTFOLIO</Link>
-                    <Link to="/">CONTACT</Link>
+                    <Link to="/contact">CONTACT</Link>
                 </div>
 
                 {/* button onclick으로 변경, 어떻게하면 화면 위치를 옮길 수 있는가? */}

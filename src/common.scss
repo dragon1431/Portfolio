@@ -10,9 +10,11 @@ html, body {
 .header {
     position: fixed;
     top: 0; left: 0;
+    background-color: #111111;
+    z-index: 9999;
 
     width: 100%;
-    height: 10vh;
+    height: 104px;
 
     display: flex;
     justify-content: center;
